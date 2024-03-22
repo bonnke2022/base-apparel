@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Josefin sans';
+    src: url(images/JosefinSans-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    /* font size */
+    --fs-160: 16px;
+
+    /* font weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+
+    /* font family */
+    --ff-josefin: 'Josefin sans';
+}
+.fs-160 {
+    font-size: var(--fs-160);
+    line-height: 1.4;
+}
+.fw-300 {
+    font-weight: var(--fw-300);
+}
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+.fw-600 {
+    font-weight: var(--fw-600);
+}
+.ff-josefin {
+    font-family: var(--ff-josefin);
+}
+.bg-body {
+    background: url("Images/bg-pattern-desktop.svg");
+}
+.bg-container {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.text-color {
+    color: var(--Desaturated-Red);
+}
+.text-dark {
+    color: var(--Dark-Grayish-Red);
+}
+.text-red {
+    color: var(--Soft-Red);
+}
+.uppercase {
+    text-transform: uppercase;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p {
+    font-weight: 400;
+}
+.flex {
+    display: flex;
+}
+body {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    flex-direction: column;
+    width: 90%;
+    max-width: 375px;
+}
+.header img {
+    padding: 2rem 2rem;
+    width: 45%;
+}
+.preview {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex-direction: column;
+}
+.texts > p {
+    font-size: 16px;
+    margin: 0 0 1.5rem 0;
+}
+.texts > h1 {
+    margin: 2rem 0 1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 4.75px;
+    line-height: 1.1;
+}
+.input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+input {
+    width: 100%;
+    padding: .7rem 1.5rem;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    margin: 0 0 .5rem 0;
+}
+.arrow {
+    background: var(--Soft-Red);
+    padding: .8rem 1.8rem;
+    opacity: .6;
+    border-radius: 40px;
+    position: absolute;
+    top: 1px;
+    right: 0;
+    cursor: pointer;
+}
+.arrow:hover,
+.arrow:focus {
+    opacity: .4;
+}
+.error {
+    position: absolute;
+    top: 13px;
+    right: 4.6rem;
+    visibility: hidden;
+}
+.error.active {
+    visibility: visible;
+}
+.email {
+    text-align: left;
+}
+.email > p {
+    font-size: 13px;
+    margin: 0 0 0 1.5rem;
+    visibility: hidden;
+}
+.email > p.active {
+    visibility: visible;
+}
+.desktop {
+    display: none;
+}
+.logo-desktop {
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    body {
+        min-height: 100vh;
+    }
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+        width: 50%;
+    }
+    .preview {
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 900px;
+        width: 100%;
+    }
+    .logo-desktop {
+        display: block;
+        margin: 0 0 5rem 0;
+    }
+    .logo-mobile {
+        display: none;
+    }
+    .texts {
+        padding: 3rem 1rem 0 4rem;
+        text-align: left;
+        font-size: 13px;
+    }
+    .texts h1 {
+        font-size: 3rem;
+        letter-spacing: 9px;
+        padding: 0rem 3rem 2rem 0;
+    }
+    .texts > p {
+        padding: 0 0.5rem 2rem 0;
+    }
+    .email {
+        width: 80%;
+    }
+    .input {
+        width: 100%;
+    }
+    .arrow {
+        padding: .65rem 1.8rem;
+    }
+}
